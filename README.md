@@ -5,3 +5,5 @@ In geometry, Pick's theorem provides a formula for the area of a simple polygon 
 This is a simple pyTK demo for it.
 
 Also there is a script w|o tkinter.
+
+!(explanation)[https://ds04.infourok.ru/uploads/ex/0697/0016c2e6-09726228/img1.jpg]
