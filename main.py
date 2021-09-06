@@ -76,16 +76,16 @@ def draw_points(canvas, A_points, B_points):
 
 def point_in_poly(p, poly):
     x, y = p
-    oddnodes = False
+    odd = False
     
     for segment_a, segment_b in zip(poly, poly[1:] + [poly[0]]):
         x_a, y_a = segment_a
         x_b, y_b = segment_b
         if (y_a < y <= y_b) or (y_b < y <= y_a):
             if (x_a + (y - y_a) / (y_b - y_a) * (x_b - x_a)) < x:
-                oddnodes = not oddnodes
+                odd = not odd
     
-    return oddnodes
+    return odd
 
 def find_A_points(poly, B_points):
     min_x, max_x = min([x[0] for x in poly ]), max([x[0] for x in poly ])
