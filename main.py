@@ -1,41 +1,11 @@
+from tkinter import *
+
 from itertools import product
 from numpy import polyfit
 from random import randint
 
-from tkinter import *
-
 poly = [ (randint(-7,12), randint(-7,12)) for i in range(randint(3, 10)) ]
 poly += [poly[0]]
-#poly = [
-#    (0,0),
-#    (4,0),
-#    (1,1),
-#    (4,3),
-#    (0,3),
-#    (0,0),
-#]
-#
-poly = [
-    (0,0),
-    (0,5),
-    (7,5),
-    (5,2),
-    (3,4),
-    (1,2),
-    (1,1),
-    (3,3),
-    (5,2),
-    (7,4),
-    (7,0),
-    (0,0),
-]
-#poly = [
-#    (0, 3),
-#    (4, 5),
-#    (4, 3),
-#    (1, 0),
-#    (0, 3),
-#]
 
 def c_to_canvas(a):
     return (a + 7) * 25
