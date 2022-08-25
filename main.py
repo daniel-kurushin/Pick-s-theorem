@@ -83,14 +83,15 @@ def find_B_points(poly):
             B_points |= set([ (x, y) for y in range(min_y, max_y) ])
     return B_points
 
-B_points = find_B_points(poly)
-A_points = find_A_points(poly, B_points)
-A = len(A_points)
-B = len(B_points)
-S = A + B / 2 - 1
+if __name__ == '__main__':
+    B_points = find_B_points(poly)
+    A_points = find_A_points(poly, B_points)
+    A = len(A_points)
+    B = len(B_points)
+    S = A + B / 2 - 1
 
-root, canvas, message = create_interface()
-draw_points(canvas, A_points, B_points)
-message.set("%s = %s + %s / 2 - 1" % (S, A, B))
-root.mainloop()
+    root, canvas, message = create_interface()
+    draw_points(canvas, A_points, B_points)
+    message.set("%s = %s + %s / 2 - 1" % (S, A, B))
+    root.mainloop()
 
